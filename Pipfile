@@ -6,6 +6,8 @@ name = "pypi"
 [packages]
 requests = "*"
 beautifulsoup4 = "*"
+dataclass-csv = "*"
+tqdm = "*"
 
 [dev-packages]
 
