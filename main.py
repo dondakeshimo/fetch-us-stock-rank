@@ -4,6 +4,7 @@ This script scrapes US Stock ranking and output CSV.
 
 """
 
+from datetime import datetime
 import pathlib
 import re
 import time
@@ -114,4 +115,5 @@ if __name__ == "__main__":
         records += create_records(soup)
         time.sleep(0.1)
 
-    dump_csv(pathlib.Path("./test.csv"), records)
+    now_str = datetime.now().strftime("%Y%M%d%H%M%S")
+    dump_csv(pathlib.Path(f"./us_rank_{now_str}.csv"), records)
